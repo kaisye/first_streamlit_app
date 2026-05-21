@@ -1,3 +1,6 @@
 ## This is my first streamlit app
 
-# Link here:  https://keeptrack-demo-app.streamlit.app/
+# Math graphs  https://keeptrack-demo-app.streamlit.app/
+
+
+# Factorial app https://keeptrack-factorial-app.streamlit.app/
