@@ -8,7 +8,7 @@
 
 - `streamlit_basic`: app guideline hướng dẫn cú pháp Streamlit cơ bản và một số tính năng nâng cao cho người mới bắt đầu.
 
-**=> https://keeptrack-streamlit-basic.streamlit.app/**
+**=> https://keeptrack-guideline-basic.streamlit.app/**
 
 ## Nội dung project
 
