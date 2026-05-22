@@ -1,13 +1,14 @@
-# First Streamlit App
+# KeepTrack Day 07 - Streamlit Apps
 
-Đây là project thực hành Streamlit đầu tiên. Repo hiện có 2 app Streamlit riêng biệt:
+Đây là project thực hành Streamlit trong ngày 07. Repo hiện có 2 app Streamlit riêng biệt:
 
-- `math_graph`: app vẽ biểu đồ toán học và biểu đồ dữ liệu.
-  => **https://keeptrack-math-graph.streamlit.app/**
-  
-- `factorial_app`: app tính giai thừa với giao diện tối.
-=> **https://keeptrack-factorial-app.streamlit.app/**
-  
+- `math_graph`: app vẽ biểu đồ toán học và biểu đồ dữ liệu bằng Streamlit, NumPy, Matplotlib và Seaborn.
+
+**=> https://keeptrack-math-graph.streamlit.app/**
+
+- `streamlit_basic`: app guideline hướng dẫn cú pháp Streamlit cơ bản và một số tính năng nâng cao cho người mới bắt đầu.
+
+**=> https://keeptrack-streamlit-basic.streamlit.app/**
 
 ## Nội dung project
 
@@ -15,21 +16,46 @@
 .
 |-- requirements.txt
 |-- note_streamlit.md
+|-- note_streamlit.pdf
 |-- streamlit.ipynb
 |-- math_graph/
 |   `-- app.py
-`-- factorial_app/
-    |-- app.py
-    `-- factorial.py
+`-- streamlit_basic/
+    `-- app.py
 ```
 
 Trong đó:
 
-- `math_graph/app.py`: app Streamlit vẽ scatter plot, đồ thị sin, so sánh exp/log, đồ thị bậc 2 và heatmap.
-- `factorial_app/app.py`: giao diện Streamlit dark theme để tính giai thừa.
-- `factorial_app/factorial.py`: hàm xử lý logic tính giai thừa.
+- `math_graph/app.py`: app Streamlit vẽ scatter plot, đồ thị sin, so sánh exp/log, đồ thị bậc 2 bằng slider và heatmap.
+- `streamlit_basic/app.py`: app guideline với ví dụ code rõ ràng cho các cú pháp Streamlit cơ bản như `st.title`, `st.write`, `st.button`, `st.number_input`, `st.dataframe`, `st.line_chart`.
 - `requirements.txt`: danh sách thư viện cần cài đặt.
 - `note_streamlit.md`: ghi chú kiến thức Streamlit bằng tiếng Việt.
+- `note_streamlit.pdf`: bản PDF của ghi chú Streamlit.
+
+## Nội dung chính của từng app
+
+### Math Graph App
+
+App này minh họa cách dùng Streamlit để hiển thị biểu đồ:
+
+- Scatter plot từ dataset `tips` của Seaborn.
+- Đồ thị hàm số sin.
+- So sánh hàm `exp` và `log`.
+- Đồ thị hàm bậc 2 với các hệ số điều chỉnh bằng slider.
+- Heatmap cho hàm `z = x^2 + y^2`.
+
+### Streamlit Basic App
+
+App này đóng vai trò như một guideline học Streamlit trực tiếp trên giao diện web:
+
+- Hiển thị nội dung: `st.title`, `st.header`, `st.write`, `st.markdown`, `st.code`.
+- Nhận input: `st.text_input`, `st.number_input`, `st.slider`, `st.selectbox`, `st.checkbox`.
+- Button và điều kiện: `st.button`.
+- Hiển thị dữ liệu: `st.dataframe`, `st.table`.
+- Vẽ biểu đồ: `st.line_chart`, `st.bar_chart`.
+- Layout: `st.columns`, `st.tabs`, sidebar.
+- Upload file: `st.file_uploader`.
+- Tính năng nâng cao: `st.session_state`, `st.cache_data`, `st.metric`, `st.expander`, `st.download_button`.
 
 ## Cài đặt môi trường
 
@@ -65,20 +91,20 @@ Sau đó mở trình duyệt tại:
 http://localhost:8501
 ```
 
-## Chạy Factorial App
+## Chạy Streamlit Basic App
 
-Factorial App là app tính giai thừa với giao diện tối, có sidebar chọn số, hiển thị số chữ số của kết quả và phần ghi chú công thức.
+Streamlit Basic App là app nhập môn, minh họa cách dùng các cú pháp Streamlit thông qua ví dụ code trực tiếp trên giao diện.
 
 Chạy lệnh:
 
 ```powershell
-streamlit run factorial_app/app.py
+streamlit run streamlit_basic/app.py
 ```
 
 Nếu port `8501` đang được dùng, có thể chạy bằng port khác:
 
 ```powershell
-streamlit run factorial_app/app.py --server.port 8502
+streamlit run streamlit_basic/app.py --server.port 8502
 ```
 
 ## Thư viện sử dụng
@@ -101,8 +127,10 @@ Các bước cơ bản:
 4. Chọn branch `main`.
 5. Chọn file chính:
    - Math Graph App: `math_graph/app.py`
-   - Factorial App: `factorial_app/app.py`
+   - Streamlit Basic App: `streamlit_basic/app.py`
 6. Bấm Deploy.
+
+Nếu muốn deploy cả 2 app, hãy tạo 2 app riêng trên Streamlit Cloud, mỗi app trỏ tới một `Main file path` khác nhau.
 
 Link Streamlit Community Cloud:
 
@@ -133,6 +161,14 @@ git commit -m "Update Streamlit app"
 Push lên GitHub:
 
 ```powershell
+git push
+```
+
+Nếu vừa đổi tên folder hoặc xóa file, nên dùng:
+
+```powershell
+git add -A
+git commit -m "Update Streamlit apps"
 git push
 ```
 
