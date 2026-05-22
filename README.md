@@ -3,13 +3,11 @@
 Đây là project thực hành Streamlit đầu tiên. Repo hiện có 2 app Streamlit riêng biệt:
 
 - `math_graph`: app vẽ biểu đồ toán học và biểu đồ dữ liệu.
+  => **https://keeptrack-demo-app.streamlit.app/**
+  
 - `factorial_app`: app tính giai thừa với giao diện tối.
-
-Link demo:
-
-```text
-https://keeptrack-demo-app.streamlit.app/
-```
+=> **https://keeptrack-factorial-app.streamlit.app/**
+  
 
 ## Nội dung project
 
